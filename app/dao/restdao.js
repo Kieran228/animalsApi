@@ -24,6 +24,13 @@ class RestDao {
             res.send(rows)
         })
     }
+    
+    findIDTwo(req, res) {
+        pool.query('SELECT * from animal_records WHERE id = 2', (err, rows) => {
+            console.log(rows)
+            res.send(rows)
+        })
+    }
 }
 
 module.exports = RestDao;

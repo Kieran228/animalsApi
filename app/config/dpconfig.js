@@ -1,3 +1,5 @@
+//! THIS IS OUR DATABASE CONNECTION FILE
+
 const mysql = require('mysql')
 
 const pool = mysql.createPool({
@@ -7,7 +9,7 @@ const pool = mysql.createPool({
     database: 'animals'
 });
 
-//? This makes our variable
+//? This makes our variable "pool" available throughout the entire project.
 module.exports = pool;
 
 pool.getConnection((err, connection) => {
@@ -22,6 +24,7 @@ pool.getConnection((err, connection) => {
             console.error("Database connection was refused.")
         }
     }
-    connection.release();
+    
+
     return;
 });

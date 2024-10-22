@@ -11,4 +11,8 @@ router.get('/', (req, res) => {
     dao.findAll(req, res);
 });
 
+router.get('/three', (req, res) => {
+    dao.findIDThree(req, res);
+})
+
 module.exports = router;

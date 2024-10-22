@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 
-router.use('/states', require('./api/restroutes'));
+router.use('/animals', require('./api/restroutes'));
 
 router.use('/animal_records', require('./api/typeroutes'));
 
